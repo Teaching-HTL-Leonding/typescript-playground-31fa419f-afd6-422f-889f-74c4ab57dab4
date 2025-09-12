@@ -17,6 +17,8 @@ function setup() {
   fill("brown");
   rect(280, 220, 20, 80); // Trunk of the tree
 
+  noStroke()
+
   fill("green");
   ellipse(290, 200, 60, 60); // Top leaves
   ellipse(270, 220, 60, 60); // Left leaves
