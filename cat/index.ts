@@ -20,5 +20,5 @@ function setup() {
     line(400, 450, 370, 470)
 
     line(370, 470, 340, 450)//left mouth
-    line(430, 470, 460, 450)//right mou
+    line(430, 470, 460, 450)//right mouth
 }
