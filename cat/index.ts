@@ -21,4 +21,10 @@ function setup() {
 
     line(370, 470, 340, 450)//left mouth
     line(430, 470, 460, 450)//right mouth
+
+    //beard
+    line(350, 440, 400, 440)
+    line(400, 440, 350, 440)
+
+
 }
