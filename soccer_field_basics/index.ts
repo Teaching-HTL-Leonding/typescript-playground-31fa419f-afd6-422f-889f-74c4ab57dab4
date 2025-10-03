@@ -36,5 +36,13 @@ function setup() {
    rect(0, 10, 15, 50);
    rect(85, 10, 15, 50);
 
+   fill("White");
+   circle(11, SOCCERMIDDLELINE, 1);
+
+   circle(SOCCERMIDDLELINEX, SOCCERMIDDLELINE, 1);
+
+   circle(89, SOCCERMIDDLELINE, 1)
+
+
  
 }
