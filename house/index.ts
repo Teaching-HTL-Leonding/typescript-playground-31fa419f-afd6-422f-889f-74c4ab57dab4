@@ -1,23 +1,24 @@
 function setup() {
-        createCanvas(400, 200);
-        noFill()
-        strokeWeight(5);
-    
-        stroke("blue");
-        circle(100, 100, 80);
+    createCanvas(400, 400);
 
-        stroke("black");
-        circle(200, 100, 80);
-
-        
-        stroke("red");
-        circle(300, 100, 80);
+    background("lightblue");
 
     
-        stroke("yellow");
-        circle(150, 140, 80);
+    fill("red");
+    rect(150, 200, 100, 100);
 
-        
-        stroke("green");
-        circle(250, 140, 80);
-    }
+    fill("yellow")
+    rect(185, 250, 30, 50);
+
+    fill("darkred");
+    triangle(140, 200, 260, 200, 200, 150);
+
+    
+    fill("brown");
+    rect(280, 220, 20, 80);
+
+    fill("green");
+    ellipse(290, 200, 60, 60);
+    ellipse(270, 220, 60, 60);
+    ellipse(310, 220, 60, 60);
+}
