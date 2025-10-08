@@ -42,6 +42,12 @@ function setup() {
    circle(SOCCERMIDDLELINEX, SOCCERMIDDLELINE, 1);
 
    circle(89, SOCCERMIDDLELINE, 1)
+   
+   line(5, 70, 0, 65)
+   line(5, 0, 0, 5)
+
+   line(95, 70, 100, 65)
+   line(95, 0, 100, 5)
 
 
  
