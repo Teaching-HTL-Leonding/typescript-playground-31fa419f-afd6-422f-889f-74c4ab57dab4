@@ -48,7 +48,4 @@ function setup() {
 
    line(95, 70, 100, 65)
    line(95, 0, 100, 5)
-
-
- 
 }
