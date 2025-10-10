@@ -21,11 +21,20 @@ stroke("green")
 arc(680, 580, 100, 150, -45, 75)
 
 noStroke()
+
+fill("purple")
+circle(300, 500, 70)
+circle(280, 550, 70)
+circle(230, 550, 70)
+circle(200, 520, 70)
+circle(260, 450, 70)
+circle(200, 460, 70)
+
 fill("yellow")
 circle(250, 500, 65)
 
-fill("purple")
-circle(200, 520, 70)
-circle(240, 560, 70)
-circle(300, 540, 70)
+noFill()
+stroke("green")
+strokeWeight(6)
+arc(270, 580, 100, 150, -45, 75)
 }
