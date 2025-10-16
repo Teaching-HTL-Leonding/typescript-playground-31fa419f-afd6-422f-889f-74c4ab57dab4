@@ -5,7 +5,7 @@ function setup() {
 }
 
 function mouseMoved() {
-  background("aqua")
+  //background("aqua")
   stroke("blue");
   noFill();
   // "Variable"
