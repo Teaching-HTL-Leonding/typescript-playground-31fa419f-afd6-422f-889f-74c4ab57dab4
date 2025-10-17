@@ -21,10 +21,13 @@ function setup() {
  const leftEyeCenterX = headX + headWidth * 0.25;
  const leftEyeCenterY = headY + headHeight * 0.25;
  const leftEyeDiameter = min(headWidth, headHeight) * 0.2;
- fill("black")
- circle(leftEyeCenterX, leftEyeCenterY, leftEyeDiameter)
+ fill("black");
+ circle(leftEyeCenterX, leftEyeCenterY, leftEyeDiameter);
 
  //Righteye
- const rightEyeCenterX = headX + headWidth * 0.55
- const rightEyeCenterY = headY + headHeight * 0.25
+ const rightEyeCenterX = headX + headWidth * 0.75;
+ const rightEyeCenterY = headY + headHeight * 0.25;
+ const rightEyeDiameter = min(headWidth, headHeight) * 0.2;
+ fill("black")
+ circle(rightEyeCenterX, rightEyeCenterY,rightEyeDiameter);
 }
