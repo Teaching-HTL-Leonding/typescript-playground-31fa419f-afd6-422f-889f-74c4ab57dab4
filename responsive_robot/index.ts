@@ -1,5 +1,5 @@
 function setup() {
-  createCanvas(400, 400);
+  createCanvas(400, 200);
   background("lightgray");
 
   // Define relative sizes and positions based on canvas width and height
@@ -14,7 +14,8 @@ function setup() {
  
  //Antene 
  fill("white")
- line(headWidth, 100, headWidth, 50);
+ const antene = headx, 
+ line(headX, )
  circle(headWidth, 40, 20);
 
  //Lefteye
