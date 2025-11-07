@@ -28,6 +28,12 @@ function mouseMoved() {
     line(mouseX, mouseY, mouseX + width1, mouseY+ height1)
     line(mouseX+ width1, mouseY, mouseX , mouseY + height1)
 
+    noStroke();
+    fill("lightgray");
+    textAlign(RIGHT);
+    text(`${width1}`, width/2 - width1 / 2 - 5, height/2 - 5);
+    text(`${height1}`, width/2, height/2 - height1/2 - 5);
+
 
 
 
