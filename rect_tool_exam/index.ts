@@ -15,6 +15,7 @@ function mouseMoved() {
     strokeWeight(2);
     noFill();
     stroke("white")
+    
     rect(mouseX, mouseY, width1, height1)
 
     stroke("black")
@@ -33,6 +34,8 @@ function mouseMoved() {
     textAlign(RIGHT);
     text(`${width1}`, width/2 - width1 / 2 - 5, height/2 - 5);
     text(`${height1}`, width/2, height/2 - height1/2 - 5);
+
+
 
 
 
