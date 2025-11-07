@@ -6,8 +6,8 @@ function setup() {
 function mouseMoved() {
  background("black");
 
-let width = mouseX * 2
-let heightx = mouseY * 2
+let width = Math.abs((mouseX - width/2) * 2)
+let heightx = Math.abs((mouseY - height/2) * 2);
 
 noFill()
 stroke("white")
