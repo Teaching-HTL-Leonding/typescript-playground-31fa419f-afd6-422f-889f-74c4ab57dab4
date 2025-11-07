@@ -26,7 +26,7 @@ function mouseMoved() {
     
     stroke("white")
     line(mouseX, mouseY, mouseX + width1, mouseY+ height1)
-    line(mouseX+ width1, mouseY, mouseX - width1, mouseY - height1)
+    line(mouseX+ width1, mouseY, mouseX , mouseY + height1)
 
 
 
