@@ -1,4 +1,3 @@
-
 const textAreaHeight: number = 50;
 
 function setup() {
