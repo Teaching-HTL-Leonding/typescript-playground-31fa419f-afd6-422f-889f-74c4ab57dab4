@@ -4,10 +4,6 @@ let size = 50;
 let countdown = 10;
 let dx = 2;
 let dy = 2;
-let  cTopRight ="white"
-let cRightBottom
-let cBottomLeft
-let cLeftTop
 function setup() {
     createCanvas(300, 300);
 }
@@ -30,16 +26,20 @@ function draw() {
         y += dy;
 
     }
-     if (x <= 0 || x >= width) {
-         dx*= -1;
-         countdown--
-    }
-      if (y <= 0 || y >= height) {
-        dy *= -1;
+
+      if (x <= 0 || x >= width) {
+        if (countdown > 0)
+        dx *= -1;
         countdown--
     }
-  if (countdown == 0){
-    dx = 0
-  }
+         if (y <= 0 || y >= height) {
+        dy *= -1;
+        if (countdown > 0) {
 
+            countdown--
+        }
+    }                         
+
+
+  
 }
