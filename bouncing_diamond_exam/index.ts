@@ -28,6 +28,7 @@ function draw() {
     if (countdown > 0) {
         x += dx;
         y += dy;
+
     }
      if (x <= 0 || x >= width) {
          dx*= -1;
@@ -37,6 +38,8 @@ function draw() {
         dy *= -1;
         countdown--
     }
-
+  if (countdown == 0){
+    return
+  }
 
 }
