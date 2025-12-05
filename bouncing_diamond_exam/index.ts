@@ -39,7 +39,7 @@ function draw() {
         countdown--
     }
   if (countdown == 0){
-    return
+    dx = 0
   }
 
 }
