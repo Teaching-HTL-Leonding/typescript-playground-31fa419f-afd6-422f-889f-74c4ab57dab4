@@ -1,5 +1,5 @@
 function setup() {
-  
+
     const SIZE = 400;
     const GRID = 25;
 
@@ -10,7 +10,7 @@ function setup() {
     stroke("lightgray");
 
     let i = GRID;
-    for (i < SIZE) {
+    while (i < SIZE) {
         line(i, 0, i, SIZE);
         i += GRID;
     }
