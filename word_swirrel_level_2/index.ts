@@ -1,44 +1,40 @@
 const WIDTH = 500;
 const HEIGHT = 300;
-const MARGIN = 50;
+
 
 const wordToGuess = "apple";
 
 function setup() {
   createCanvas(WIDTH, HEIGHT);
   background("black");
-  textAlign(CENTER, CENTER);
-  colorMode(HSB);
-  angleMode(DEGREES);
 
-  for (let i = 0; i < wordToGuess.length; i++) {
+ let wordToScramble = wordToGuess
+ let scrambledWord = ""
+ while (wordToScramble.length > 0) {
+  let letterIndex = Math.floor(random(wordToScramble.length))
+  scrambledWord += wordToScramble[letterIndex]
+  wordToScramble = wordToScramble.substring(0, letterIndex)
+  + wordToScramble.substring(letterIndex + 1)
+ }
 
-    const x = random(MARGIN, WIDTH - MARGIN);
-    const y = random(MARGIN, HEIGHT - MARGIN);
-    const charSize = random(50, 150);
-    const textColor = random(0, 360);
-    const angle = random(-90, 90);
-
-    push();
-    translate(x, y);
-    rotate(angle);
-    fill(textColor, 100, 100);
-    textSize(charSize);
-    text(wordToGuess[i], 0, 0);
-    pop();
-  }
+ textAlign(CENTER, CENTER)
+ fill("white")
+ textSize(75)
+ text(scrambledWord, WIDTH / 2, HEIGHT / 2)
 }
 
+// This method will be called automatically when the user clicks "Guess".
+// The guessed text will be in "textInput".
 function guess(textInput: string) {
-  fill("white");
+ fill("white")
 
-  if (textInput === wordToGuess) {
-    background("green");
-    textSize(75);
-    text("Correct!", WIDTH / 2, HEIGHT / 2);
-  } else {
-    background("red");
-    textSize(50);
-    text(`Wrong!\nIt was "${wordToGuess}"`, WIDTH / 2, HEIGHT / 2);
-  }
+ if (textInput ===  wordToGuess) {
+  background("green")
+  textSize(75)
+  text("Correct!", WIDTH / 2, HEIGHT / 2)
+ } else {
+  background("red")
+  textSize(50)
+  text(`Wrong!\nIt was "${wordToGuess}"`,WIDTH / 2, HEIGHT / 2)
+ }
 }
