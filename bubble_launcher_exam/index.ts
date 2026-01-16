@@ -10,9 +10,7 @@ const DIAM: number = RADI * 2;
 
 function setup() {
     createCanvas(500, 300);
-    circleX.push(RADI)
-    circleY.push(height / 2)
-    direction.push(1)
+    
 }
 
 function draw() {
