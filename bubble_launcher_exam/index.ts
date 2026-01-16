@@ -2,6 +2,8 @@ let circleX: number[] = []
 let circleY: number[] = []
 let direction: number[] = []
 
+let launcherY: number = 150
+
 const SPEED: number = 2;
 const RADI: number = 10;
 const DIAM: number = RADI * 2;
@@ -19,6 +21,12 @@ function draw() {
     fill('lightgray');
     stroke('darkgray');
     rect(0, 0, DIAM, height);
+
+    launcherY = mouseY
+    launcherY = max(RADI,min(height - RADI, launcherY ))
+    fill("orange")
+    stroke("darkorange")
+    circle(RADI, launcherY, DIAM)
 
     fill('yellow');
     stroke('gold');
