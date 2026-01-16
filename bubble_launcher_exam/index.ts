@@ -1,6 +1,6 @@
-let circleX: number = 0;
-let circleY: number = 150;
-let direction: number = 1;
+let circleX: number[] = []
+let circleY: number[] = []
+let direction: number[] = []
 
 const SPEED: number = 2;
 const RADI: number = 10;
@@ -8,6 +8,9 @@ const DIAM: number = RADI * 2;
 
 function setup() {
     createCanvas(500, 300);
+    circleX.push(RADI)
+    circleY.push(height / 2)
+    direction.push(1)
 }
 
 function draw() {
@@ -20,17 +23,13 @@ function draw() {
     fill('yellow');
     stroke('gold');
 
-    circle(circleX, circleY, DIAM);
+    for (let i = 0; i < circleX.length; i++) {
+        circle(circleX[i], circleY[i], DIAM);
 
-    for (let i = 0; i < circleX; i++) {
-        circle(circleX[i], circleY[i], DIAM)
-        circleX[i] += SPEED * direction[i]
-
-
-        circleX += SPEED * direction;
+        circleX[i] += SPEED * direction[i];
         if (circleX[i] - RADI < 0 || circleX[i] + RADI > width) {
             direction[i] *= -1;
-            circleX[i] = max(RADI, min(width - RADI, circleX));
+            circleX[i] = max(RADI, min(width - RADI, circleX[i]));
         }
     }
 }
@@ -44,4 +43,6 @@ function mouseClicked() {
     circleX.push(RADI)
     circleY.push(y)
     direction.push(1)
+
+
 }
