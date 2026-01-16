@@ -25,14 +25,23 @@ function draw() {
     for (let i = 0; i < circleX; i++) {
         circle(circleX[i], circleY[i], DIAM)
         circleX[i] += SPEED * direction[i]
-    }
 
-    circleX += SPEED * direction;
-    if (circleX - RADI < 0 || circleX + RADI > width) {
-        direction *= -1;
-        circleX = max(RADI, min(width - RADI, circleX));
+
+        circleX += SPEED * direction;
+        if (circleX[i] - RADI < 0 || circleX[i] + RADI > width) {
+            direction[i] *= -1;
+            circleX[i] = max(RADI, min(width - RADI, circleX));
+        }
     }
 }
 
 function mouseClicked() {
+    if (mouseX < 0 || mouseX > width || mouseY < 0 || mouseY > height) {
+        return;
+    }
+    let y = max(RADI, min(height - RADI, mouseY))
+
+    circleX.push(RADI)
+    circleY.push(y)
+    direction.push(1)
 }
