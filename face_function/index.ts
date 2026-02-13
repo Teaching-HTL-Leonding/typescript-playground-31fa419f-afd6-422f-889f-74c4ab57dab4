@@ -1,29 +1,33 @@
-let happy = true
+let happy = true;
 
 function setup() {
-  createCanvas(500, 500);
-  angleMode(DEGREES);
-  smile(true);
+  createCanvas(400, 400);
+  background(240);
+  smile(true); // erstes Gesicht ist happy
 }
 
-function mousePressed(){
+function mousePressed() {
   smile(happy);
-  happy = !happy
+  happy = !happy; 
 }
 
-function smile(happy: boolean) {
-  let x = random(500);
-  let y = random (500);
+function smile(isHappy: boolean) {
+  let x = random(width);
+  let y = random(height);
+  let r = 40;
 
-  circle(x, y, 40);
-  circle(x - 5, y- 5, 5);
-   circle(x + 5, y- 5, 5);
+  fill(isHappy ? "yellow" : "lightgreen");
+  stroke(0);
+  circle(x, y, r);
 
-   if (happy) {
-    line(x - 8, y + 8, x + 8, x + 8,);
-   } else {
-    line (x - 8, y + 12, x + 8, y + 12)
-   }
+  fill(0);
+  circle(x - 8, y - 5, 4);
+  circle(x + 8, y - 5, 4);
 
-
+  noFill();
+  if (isHappy) {
+    arc(x, y + 5, 20, 15, 0, PI);
+  } else {
+    arc(x, y + 15, 20, 15, PI, TWO_PI);
+  }
 }
